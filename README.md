@@ -1,0 +1,1242 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Thejas Resume overview</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+    /* ----- POPPINS FONT Link ----- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ----- VARIABLES ----- */
+:root{
+    --body-color: rgb(250, 250, 250);
+    --color-white: rgb(255, 255, 255);
+
+    --text-color-second: rgb(68, 68, 68);
+    --text-color-third: rgb(30, 159, 171);
+
+    --first-color: rgb(110, 87, 224);
+    --first-color-hover: rgb(40, 91, 212);
+
+    --second-color: rgb(110, 87, 224);
+    --third-color: rgb(192, 166, 49);
+    --first-shadow-color: rgba(0, 0, 0, 0.1);
+
+}
+
+/* ----- BASE ----- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ----- SMOOTH SCROLL ----- */
+html{
+    scroll-behavior: smooth;
+}
+
+/* ----- CHANGE THE SCROLL BAR DESIGN ----- */
+::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-track{
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+    background: #ccc;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #bbb;
+}
+
+
+/* ---##-- REUSABLE CSS --##--- */
+
+/* ----- GLOBAL BUTTON DESIGN ----- */
+.btn{
+    font-weight: 500;
+    padding: 12px 20px;
+    background: #efefef;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+.btn>i{
+    margin-left: 10px;
+}
+.btn:hover{
+    background: var(--second-color);
+    color: var(--color-white);
+}
+
+/* ----- GLOBAL ICONS DESIGN ----- */
+i{
+    font-size: 16px;
+}
+
+/* ------- BASE -------- */
+body{
+    background: var(--body-color);
+}
+.container{
+    width: 100%;
+    position: relative;
+    overflow-x: hidden; /* not mandatory */
+}
+
+/* ----- NAVIGATION BAR ----- */
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    background: var(--body-color);
+    padding-inline: 9vw;
+    transition: .3s;
+    z-index: 100;
+}
+.nav-logo{
+   position: relative;
+}
+.nav-name{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-color-third);
+}
+.nav-logo span{
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    font-size: 5em;
+    color: var(--text-color-second);
+}
+.nav-menu, .nav_menu_list{
+    display: flex;
+}
+.nav-menu .nav_list{
+    list-style: none;
+    position: relative;
+}
+.nav-link{
+    text-decoration: none;
+    color: var(--text-color-second);
+    font-weight: 500;
+    padding-inline: 15px;
+    margin-inline: 20px;
+}
+.nav-menu-btn{
+    display: none;
+}
+.nav-menu-btn i{
+    font-size: 28px;
+    cursor: pointer;
+}
+.active-link{
+    position: relative;
+    color: var(--first-color);
+    transition: .3;
+}
+.active-link::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: var(--first-color);
+    border-radius: 50%;
+}
+
+
+/* ----- WRAPPER DESIGN ----- */
+.wrapper{
+    padding-inline: 10vw;
+}
+
+/* ----- FEATURED BOX ----- */
+.featured-box{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    min-height: 700px;
+}
+
+/* ----- FEATURED TEXT BOX ----- */
+.featured-text{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 80vh;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 20px;
+}
+.featured-text-card span{
+    background: var(--third-color);
+    color: var(--color-white);
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+.featured-name{
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-block: 20px;
+}
+.typedText{
+    text-transform: capitalize;
+    color: var(--text-color-third);
+}
+.featured-text-info{
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: var(--text-color-second);
+}
+.featured-text-btn{
+    display: flex;
+    gap: 20px;
+}
+.featured-text-btn>.blue-btn{
+    background: var(--first-color);
+    color: var(--color-white);
+}
+.featured-text-btn>.blue-btn:hover{
+    background: var(--first-color-hover);
+}
+.social_icons{
+    display: flex;
+    margin-top: 5em;
+    gap: 30px;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.icon:hover{
+    color: var(--first-color);
+}
+
+/* ----- FEATURED IMAGE BOX ----- */
+.featured-image{
+    display: flex;
+    justify-content: right;
+    align-content: center;
+    min-height: 80vh;
+    width: 50%;
+}
+.image{
+    margin: auto 0;
+    width: 380px;
+    height: 380px;
+    animation: imgFloat 7s ease-in-out infinite;
+}
+.image img{
+    width: 380px;
+    height: 380px;
+    object-fit: contain;
+}
+@keyframes imgFloat {
+    50%{
+        transform: translateY(10px);
+    }
+}
+.scroll-btn{
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   translate: -50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 150px;
+   height: 50px;
+   gap: 5px;
+   text-decoration: none;
+   color: var(--text-color-second);
+   background: var(--color-white);
+   border-radius: 30px;
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+.scroll-btn i{
+    font-size: 20px;
+}
+
+/* ----- MAIN BOX ----- */
+.section{
+    padding-block: 5em;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+}
+.col{
+    display: flex;
+    width: 50%;
+}
+
+/* -- ## --- RESUABLE CSS -- ## -- */
+.top-header{
+    text-align: center;
+    margin-bottom: 5em;
+}
+.top-header h1{
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-bottom: 10px;
+}
+.top-header span{
+    color: #999;
+}
+h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-bottom: 15px;
+}
+
+/* ----- ABOUT INFO ----- */
+.about-info{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 30px 70px;
+    padding-inline: 20px;
+    width: 100%;
+    background: var(--color-white);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 20px;
+}
+.about-info p{
+    text-align: center;
+    font-size: 15px;
+    color: #777;
+}
+.about-btn button{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: var(--first-color);
+    color: var(--color-white);
+    border-radius: 30px;
+}
+.about-btn button:hover{
+    background: var(--first-color-hover);
+}
+
+/* ----- ABOUT / SKILLS BOX ----- */
+.skills-box{
+    margin: 10px;
+}
+.skills-header{
+    margin-bottom: 30px;
+}
+.skills-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.skills-list span{
+    font-size: 14px;
+    background: var(--first-color);
+    color: var(--color-white);
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+
+/* ----- PROJECTS BOX ----- */
+.project-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.project-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 250px;
+    background: var(--color-white);
+    border-radius: 20px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    overflow: hidden;
+}
+.project-box>i{
+    font-size: 50px;
+    color: #00B5E7;
+    margin-bottom: 25px;
+}
+.project-box label{
+    font-size: 15px;
+    color: #777;
+}
+.project-box::after, .contact-info::after{
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    background: var(--second-color);
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+    z-index: 1;
+}
+.project-box:hover.project-box::after,
+.contact-info:hover.contact-info::after{
+    bottom: 0;
+}
+.project-box:hover.project-box i,
+.project-box:hover.project-box>h3,
+.project-box:hover.project-box>label{
+    color: var(--color-white);
+    z-index: 2;
+}
+
+/* ----- CONTACT BOX ----- */
+.contact-info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    width: 100%;
+    height: 315px;
+    background: var(--second-color);
+    border-radius: 10px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    overflow: hidden;
+}
+.contact-info>h2{
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+.contact-info>p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-white);
+    margin-block: 5px;
+}
+.contact-info p>i{
+    font-size: 18px;
+}
+.contact-info::after{
+    background: var(--color-white);
+}
+.contact-info:hover.contact-info h2,
+.contact-info:hover.contact-info p,
+.contact-info:hover.contact-info i{
+    color: #777;
+    z-index: 2;
+}
+
+/* ----- CONTACT FORM ----- */
+.form-control{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.form-inputs{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.input-field{
+    width: 50%;
+    height: 55px;
+    background: transparent;
+    border: 2px solid #AAA;
+    border-radius: 10px;
+    padding-inline: 20px;
+    outline: none;
+}
+textarea{
+    width: 100%;
+    height: 250px;
+    background: transparent;
+    border: 2px solid #AAA;
+    border-radius: 10px;
+    padding: 15px 20px;
+    outline: none;
+    resize: none;
+}
+.form-button>.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--second-color);
+    color: var(--color-white);
+}
+.form-button>.btn:hover{
+    background: #00B5E7;
+}
+.form-button i{
+    font-size: 18px;
+    rotate: -45deg;
+}
+
+/* ----- FOOTER BOX ----- */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
+    background: #F8F8F8;
+    padding-block: 40px 60px;
+}
+.top-footer p{
+    font-size: 25px;
+    font-weight: 600;
+}
+.middle-footer .footer-menu{
+    display: flex;
+}
+.footer_menu_list{
+    list-style: none;
+}
+.footer_menu_list a{
+    text-decoration: none;
+    color: var(--text-color-second);
+    font-weight: 500;
+    margin-inline: 20px;
+}
+.footer-social-icons{
+    display: flex;
+    gap: 30px;
+}
+.bottom-footer{
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+/* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
+@media only screen and (max-width: 1024px){
+    .featured-text{
+        padding: 0;
+    }
+    .image, .image img{
+        width: 320px;
+        height: 320px;
+    }
+}
+
+/* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
+@media only screen and (max-width: 900px) {
+    .nav-button{
+        display: none;
+    }
+    .nav-menu.responsive{
+        left: 0;
+    }
+    .nav-menu{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+        width: 100%;
+        min-height: 450px;
+        height: 90vh;
+        transition: .3s;
+    }
+    .nav_menu_list{
+        flex-direction: column;
+    }
+    .nav-menu-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .featured-box{
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+    .featured-text{
+        width: 100%;
+        order: 2;
+        justify-content: center;
+        align-content: flex-start;
+        min-height: 60vh;
+    }
+    .social_icons{
+        margin-top: 2em;
+    }
+    .featured-image{
+        order: 1;
+        justify-content: center;
+        min-height: 150px;
+        width: 100%;
+        margin-top: 65px;
+    }
+    .image, .image img{
+        width: 150px;
+        height: 150px;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+    }
+    .col{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .about-info, .contact-info{
+        width: 100%;
+    }
+    .project-container{
+        justify-content: center;
+    }
+    .project-box{
+        width: 80%;
+    }
+
+}
+
+/* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
+
+@media only screen and (max-width: 540px){
+    .featured-name{
+        font-size: 40px;
+    }
+    .project-box{
+        width: 100%;
+    }
+    .form-inputs{
+        flex-direction: column;
+    }
+    .input-field{
+        width: 100%;
+    }
+}
+
+    /* EOS */
+  </style>
+
+  <script id="insert"></script>
+
+    <script src="/js/stringify.js?474560416582b5c115cac195df4525e51ede69a4" charset="utf-8"></script>
+    <script>
+      const customConsole = (w) => {
+        const pushToConsole = (payload, type) => {
+          w.parent.postMessage({
+            console: {
+              payload: stringify(payload),
+              type:    type
+            }
+          }, "*")
+        }
+
+        w.onerror = (message, url, line, column) => {
+          // the line needs to correspond with the editor panel
+          // unfortunately this number needs to be altered every time this view is changed
+          line = line - 70
+          if (line < 0){
+            pushToConsole(message, "error")
+          } else {
+            pushToConsole(`[${line}:${column}] ${message}`, "error")
+          }
+        }
+
+        let console = (function(systemConsole){
+          return {
+            log: function(){
+              let args = Array.from(arguments)
+              pushToConsole(args, "log")
+              systemConsole.log.apply(this, args)
+            },
+            info: function(){
+              let args = Array.from(arguments)
+              pushToConsole(args, "info")
+              systemConsole.info.apply(this, args)
+            },
+            warn: function(){
+              let args = Array.from(arguments)
+              pushToConsole(args, "warn")
+              systemConsole.warn.apply(this, args)
+            },
+            error: function(){
+              let args = Array.from(arguments)
+              pushToConsole(args, "error")
+              systemConsole.error.apply(this, args)
+            },
+            system: function(arg){
+              pushToConsole(arg, "system")
+            },
+            clear: function(){
+              systemConsole.clear.apply(this, {})
+            },
+            time: function(){
+              let args = Array.from(arguments)
+              systemConsole.time.apply(this, args)
+            },
+            assert: function(assertion, label){
+              if (!assertion){
+                pushToConsole(label, "log")
+              }
+
+              let args = Array.from(arguments)
+              systemConsole.assert.apply(this, args)
+            }
+          }
+        }(window.console))
+
+        window.console = { ...window.console, ...console }
+
+        console.system("Running fiddle")
+      }
+
+      if (window.parent){
+        customConsole(window)
+      }
+    </script>
+</head>
+<body>
+     <!DOCTYPE html>
+ <html lang="en">
+
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- UNICONS -->
+     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+     <!-- CSS -->
+     <link rel="stylesheet" href="styles.css">
+     <!-- Add favicon -->
+     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+     <title>Portfolio Website</title>
+   </head>
+
+   <body>
+     <div class="container">
+       <!-- --------------- HEADER --------------- -->
+       <nav id="header">
+         <div class="nav-logo">
+           <p class="nav-name">Thejas</p>
+           <span>.</span>
+         </div>
+         <div class="nav-menu" id="myNavMenu">
+           <li class="nav_menu_list">
+           <li class="nav_list">
+             <a href="#home" class="nav-link activi-link">Home</a>
+             <div class="circle"></div>
+           </li>
+           <li class="nav_list">
+             <a href="#about" class="nav-link">My Self</a>
+             <div class="circle"></div>
+           </li>
+           <li class="nav_list">
+             <a href="#projects" class="nav-link">Content</a>
+             <div class="circle"></div>
+           </li>
+           <li class="nav_list">
+             <a href="#contact" class="nav-link">Contact</a>
+             <div class="circle"></div>
+           </li>
+           </u>
+         </div>
+         <div class="nav-button">
+           <a class="btn" href="https://drive.google.com/file/d/1yeZt80zK39ky1zqLLi9ZHq2h3WSPDvA0/view?usp=drivesdk" target="_blank" download>Download CV <i class="uil uil-file-alt"></i></a>
+         </div>
+         <div class="nav-menu-btn">
+           <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+         </div>
+       </nav>
+       <!-- -------------- MAIN ---------------- -->
+       <main class="wrapper">
+         <!-- -------------- FEATURED BOX ---------------- -->
+         <center><img src="https://lh3.googleusercontent.com/a/ACg8ocJp7lLcl4R7h4m9Y_iFZYH84mizmu6ZdeSpkA4fyGgmmOw=s288-c-no" height="10%" width="50%" <section class="featured-box" id="home">
+           <div class="featured-text">
+             <div class="featured-text-card">
+               <span>Thejas Sreenivasu </span>
+             </div>
+             <div class="featured-name">
+               <p>I'm <span class="typedText"></span></p>
+             </div>
+             <div class="featured-text-info">
+               <p>Experienced frontend developer with a passion for creating visually stunning and user-friendly websites, I am a quick learner and a team worker that gets the job motivate and last but not least i'm Secure and responsible career opportunity to fully utilize my training and skills, while making a significant contribution to the success of the company. To make use of my interpersonal skills to achieve the goals of a company that focuses on customer satisfaction and customer experience.
+
+Finally, To secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills..
+               </p>
+             </div>
+             <div class="featured-text-btn">
+               <button class="btn yellow-btn">
+                 <a href="https://sites.google.com/view/thejas-s-resume-website/my-resume" target="_top" rel="noopener noreferrer">My Another Resume Website<p>In Deatil</p></a>
+               </button>
+
+               <a class="btn" href="https://drive.google.com/file/d/1yeZt80zK39ky1zqLLi9ZHq2h3WSPDvA0/view?usp=drivesdk" target="_blank" download>Download CV <i class="uil uil-file-alt"></i></a>
+             </div>
+             <div class="social_icons">
+               <a href="https://www.instagram.com/_vinay_so_sreenivas_" target="_top" rel="noopener noreferrer">
+                 <div class="icon">
+                   <i class="uil uil-instagram"></i>
+                 </div>
+               </a>
+               <div class="icon">
+                 <a href="https://in.linkedin.com/in/thejas-sreenivasu-2677ba1b8" target="_top" rel="noopener noreferrer">
+                   <i class="uil uil-linkedin-alt"></i>
+                 </a>
+               </div>
+               <div class="icon">
+                 <a href="https://twitter.com/_so_sreenivasu_" target="_top">
+                   <i class="uil uil-twitter"></i>
+                 </a>
+               </div>
+               <div class="icon">
+                 <a href="https://www.youtube.com/channel/UCHGuSdMpRf4FihOL8byi4XA_" target="_top">
+                   <i class="uil uil-youtube"></i>
+                 </a>
+               </div>
+
+
+               <div class="icon"><i class="uil uil-github-alt"></i></div>
+             </div>
+           </div>
+
+
+
+
+           <body>
+
+
+
+             <div class="scroll-icon-box">
+               <a href="#about" class="scroll-btn">
+                 <i class="uil uil-mouse-alt"></i>
+                 <p>Scroll Up</p>
+               </a>
+             </div>
+             </section>
+             <!-- -------------- ABOUT BOX ---------------- -->
+             <section class="section" id="about">
+               <div class="top-header">
+                 <h1>About Me</h1>
+               </div>
+               <div class="row">
+                 <div class="col">
+                   <div class="about-info">
+                     <h3>My introduction</h3>
+                     <p>I am well-versed in HTML, CSS and JavaScript , and other cutting edge frameworks and libraries,which allows me to implement interactive features. Additionally, I have experirence working with content management systems (CMS) like WordPress. Fullstack Developer with a keen eye for creating visually appealing and intuitive user interfaces. A swift adaptor and collaborative team player, I am eager to bring my technical expertise and creative problem-solving skills to a dynamic team. My goal is to leverage my comprehensive training and experience in a secure and responsible role that allows for substantial contributions to my employer's success, focusing on customer satisfaction and an outstanding user experience.
+
+I am seeking a challenging position in a prestigious organization to further hone my skills and grow professionally, while being instrumental in achieving the company's objectives through dedication and excellence.
+
+
+                     </p>
+                     <div class="about-btn">
+                       <button class="btn"><a href="https://drive.google.com/file/d/1yeZt80zK39ky1zqLLi9ZHq2h3WSPDvA0/view?usp=drivesdk" target="_top" rel="noopener noreferrer">Download CV</a><i class="uil uil-import"></i></button>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="col">
+                   <div class="skills-box">
+                     <div class="skills-header">
+                       <h3>Frontend</h3>
+                     </div>
+                     <div class="skills-list">
+                       <span>HTML</span>
+                       <span>CSS</span>
+                       <span>Bootstrap</span>
+                       <span>JavaScript</span>
+                       <span>Vue</span>
+                       <span>React</span>
+                       <span>Angular</span>
+                       <span>UI&UX</span>
+                     </div>
+                   </div>
+                   <div class="skills-box">
+                     <div class="skills-header">
+                       <h3>Backend</h3>
+                     </div>
+                     <div class="skills-list">
+                       <span>PHP</span>
+                       <span>JAVA</span>
+                       <span>Python</span>
+                       <span>C++</span>
+                       <span>AWS</span>
+                     </div>
+                   </div>
+                   <div class="skills-box">
+                     <div class="skills-header">
+                       <h3>Database</h3>
+                     </div>
+                     <div class="skills-list">
+                       <span>MySQL</span>
+                       <span>PostgreSQL</span>
+                       <span>MongoDB</span>
+
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </section>
+
+             <!-- -------------- PROJECT BOX ---------------- -->
+             <section class="section" id="projects">
+               <div class="top-header">
+                 <h1>Content</h1>
+               </div>
+               <div class="project-container">
+                 <div class="project-box">
+                   <i class="uil uil-briefcase-alt"></i>
+                   <h3>Marks Card</h3>
+                   <label> <a href="https://sites.google.com/view/thejas-s-resume-website/my-marks-card" target="_top">My Eduction Documents</a></label>
+                 </div>
+                 <div class="project-box">
+                   <i class="uil uil-users-alt"></i>
+                   <h3>Project</h3>
+                   <label> <a href="https://sites.google.com/view/thejas-s-resume-website/my-project" target="_top">10+ Successfully Runing project</a></label>
+                 </div>
+                 <div class="project-box">
+                   <i class="uil uil-award"></i>
+                   <h3>My Technical Skill Certificates</h3>
+                   <label><a href="https://sites.google.com/view/thejas-s-resume-website/my-certificate-course" target="_top">Click here to look 180+ skilled with <center>genuine Certificates <center></a></label>
+
+                 </div>
+               </div>
+             </section>
+             <!-- -------------- CONTACT BOX ---------------- -->
+             <section class="section" id="contact">
+               <div class="top-header">
+                 <h1>Get in touch</h1>
+                 <span>I hope you have gone through my intrusting portfolio. Do you have any doubt in your mind or if you want hire me,<p>reach me here</p></span>
+               </div>
+               <div class="row">
+                 <div class="col">
+                   <div class="contact-info">
+                     <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                     <p><i class="uil uil-envelope"></i> Email: thejasssreenivasu@gmail.com <p>or</p>
+                       <p>thejassreenivasu@gmail.com</p>
+                     </p>
+                     <p><i class="uil uil-phone"></i> +91 9179533131</p>
+                   </div>
+                 </div>
+                 <div class="col">
+                   <div class="form-control">
+                     <div class="form-inputs">
+                       <input type="text" class="input-field" placeholder="Name">
+                       <input type="text" class="input-field" placeholder="Email">
+                       <input type="text" class="input-field" placeholder="Company">
+                     </div>
+                     <div class="text-area">
+                       <textarea placeholder="Message"></textarea>
+                     </div>
+                     <div class="form-button">
+                     </div>
+                     <div class="form-button">
+                       <button class="btn">Send <i class="uil uil-message"></i></button>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </section>
+       </main>
+       <!-- --------------- FOOTER --------------- -->
+       <footer>
+         <title>CodePen - CSS God Rays</title>
+         <style>
+           html {
+             font-size: 15px;
+           }
+
+           html,
+           body {
+             margin: 0;
+             padding: 0;
+             min-height: 100%;
+           }
+
+           body {
+             height: 100%;
+             display: flex;
+             flex-direction: column;
+           }
+
+           .referer-warning {
+             background: black;
+             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+             padding: 0.75em;
+             color: white;
+             text-align: center;
+             font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, system-ui, Sans-Serif;
+             line-height: 1.2;
+             font-size: 1rem;
+             position: relative;
+             z-index: 2;
+           }
+
+           .referer-warning span {
+             font-family: initial;
+           }
+
+           .referer-warning h1 {
+             font-size: 1.2rem;
+             margin: 0;
+           }
+
+           .referer-warning a {
+             color: #56bcf9;
+           }
+
+         </style>
+         </head>
+
+         <body class="">
+           <div id="result-iframe-wrap" role="main"> <iframe id="result" srcdoc="<!DOCTYPE html> <html lang=&quot;en&quot; > <head> <meta charset=&quot;UTF-8&quot;> <link rel=&quot;apple-touch-icon&quot; type=&quot;image/png&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png&quot; /> <meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;CodePen&quot;> <link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico&quot; /> <link rel=&quot;mask-icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg&quot; color=&quot;#111&quot; /> <script src=&quot;https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js&quot;></script> <title>CodePen - CSS God Rays</title> <link rel=&quot;canonical&quot; href=&quot;https://codepen.io/THEJAS-SREENIVASU/pen/vYbXzRR&quot;> <script src=&quot;https://cdn.tailwindcss.com&quot;></script> <script> tailwind.config = { darkMode: &quot;class&quot;, } </script> <style> @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap'); body { font-family: Inter, sans-serif; } @-webkit-keyframes jumbo { from { background-position: 50% 50%, 50% 50%; } to { background-position: 350% 50%, 350% 50%; } } @keyframes jumbo { from { background-position: 50% 50%, 50% 50%; } to { background-position: 350% 50%, 350% 50%; } } .jumbo { --stripes: repeating-linear-gradient( 100deg, #fff 0%, #fff 7%, transparent 10%, transparent 12%, #fff 16% ); --stripesDark: repeating-linear-gradient( 100deg, #000 0%, #000 7%, transparent 10%, transparent 12%, #000 16% ); --rainbow: repeating-linear-gradient( 100deg, #60a5fa 10%, #e879f9 15%, #60a5fa 20%, #5eead4 25%, #60a5fa 30% ); background-image: var(--stripes), var(--rainbow); background-size: 300%, 200%; background-position: 50% 50%, 50% 50%; filter: blur(10px) invert(100%); -webkit-mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%); mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%); pointer-events: none; } .jumbo::after { content: &quot;&quot;; position: absolute; inset: 0; background-image: var(--stripes), var(--rainbow); background-size: 200%, 100%; -webkit-animation: jumbo 60s linear infinite; animation: jumbo 60s linear infinite; background-attachment: fixed; mix-blend-mode: difference; } .dark .jumbo { background-image: var(--stripesDark), var(--rainbow); filter: blur(10px) opacity(50%) saturate(200%); } .dark .jumbo::after { background-image: var(--stripesDark), var(--rainbow); } </style> <script> window.console = window.console || function(t) {}; </script> </head> <body translate=&quot;no&quot;> <main> <div class=&quot;relative flex flex-col h-[100vh] items-center justify-center bg-white dark:bg-black transition-bg&quot;> <div class=&quot;absolute inset-0 overflow-hidden&quot;> <div class=&quot;jumbo absolute -inset-[10px] opacity-50&quot;></div> </div> <h1 class=&quot;relative flex items-center text-5xl font-bold text-gray-800 dark:text-white dark:opacity-80 transition-colors&quot;> THEJAS S <span class=&quot;ml-1 rounded-xl bg-current p-2 text-[0.7em] leading-none&quot;> <span class=&quot;text-white dark:text-black&quot;>TS</span> </span> </h1> <div class=&quot;mt-4&quot;> <button onclick=&quot;toggleTheme()&quot; class=&quot;px-3 py-1 border border-stone-200 rounded-full drop-shadow-sm text-sm text-stone-800 dark:text-white bg-white/40 dark:bg-black/40 backdrop-blur-lg hover:border-stone-300 transition-colors dark:border-stone-500 dark:hover:border-stone-400&quot;>Toggle Theme</button> </div> </div> </main> <script id=&quot;rendered-js&quot; > function toggleTheme() { if (document.body.classList.contains(&quot;dark&quot;)) document.body.classList.remove(&quot;dark&quot;);else document.body.classList.add(&quot;dark&quot;); } //# sourceURL=pen.js </script> </body> </html> " sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" allow="accelerometer; ambient-light-sensor; camera; display-capture; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr; web-share" allowTransparency="true" allowpaymentrequest="true" allowfullscreen="true" class="result-iframe" width="100%"> </iframe> </div>
+           <div class="middle-footer">
+             <ul class="footer-menu">
+               <li class="footer_menu_list">
+                 <a href="#home">Home</a>
+               </li>
+               <li class="footer_menu_list">
+                 <a href="#about">My Self</a>
+               </li>
+               <li class="footer_menu_list">
+                 <a href="#projects">Content</a>
+               </li>
+               <li class="footer_menu_list">
+                 <a href="#contact">Contact</a>
+               </li>
+             </ul>
+           </div>
+           <div class="footer-social-icons">
+             <a href="https://www.instagram.com/_vinay_so_sreenivas_" target="_top" rel="noopener noreferrer">
+               <div class="icon">
+                 <i class="uil uil-instagram"></i>
+               </div>
+             </a>
+             <div class="icon">
+               <a href="https://in.linkedin.com/in/thejas-sreenivasu-2677ba1b8" target="_top">
+                 <i class="uil uil-linkedin-alt"></i>
+               </a>
+             </div>
+             <div class="icon">
+               <a href="https://twitter.com/_so_sreenivasu_" target="_top">
+                 <i class="uil uil-twitter"></i>
+               </a>
+             </div>
+             <div class="icon">
+               <a href="https://www.youtube.com/channel/UCHGuSdMpRf4FihOL8byi4XA_" target="_top">
+                 <i class="uil uil-youtube"></i>
+               </a>
+             </div>
+
+
+             <div class="icon"><i class="uil uil-github-alt"></i></div>
+           </div>
+
+           <div class="bottom-footer">
+             <p>Copyright © <a href="#home" style="text-decoration: none;">Thejas Sreenivasu</a> - All rights reserved
+             </p>
+           </div>
+
+       </footer>
+     </div>
+
+     <!-- ----- TYPING JS Link ----- -->
+     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+     <!-- ----- SCROLL REVEAL JS Link----- -->
+     <script src="https://unpkg.com/scrollreveal"></script>
+     <!-- ----- MAIN JS ----- -->
+     <script src="script.js"></script>
+   </body>
+
+ </html>
+
+
+    <script type="text/javascript">//<![CDATA[
+
+
+/* ----- NAVIGATION BAR FUNCTION ----- */
+function myMenuFunction(){
+  let menuBtn = document.getElementById("myNavMenu");
+
+  if(menuBtn.className === "nav-menu"){
+    menuBtn.className += " responsive";
+  } else {
+    menuBtn.className = "nav-menu";
+  }
+}
+
+/* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
+window.onscroll = function() {headerShadow()};
+
+function headerShadow() {
+  const navHeader =document.getElementById("header");
+
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop >  50) {
+
+    navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
+    navHeader.style.height = "70px";
+    navHeader.style.lineHeight = "70px";
+
+  } else {
+
+    navHeader.style.boxShadow = "none";
+    navHeader.style.height = "90px";
+    navHeader.style.lineHeight = "90px";
+
+  }
+}
+
+/* ----- TYPING EFFECT ----- */
+let typingEffect = new Typed(".typedText",{
+  strings : ["Devloper","Creative","The best"],
+  loop : true,
+  typeSpeed : 100,
+  backSpeed : 80,
+  backDelay : 2000
+})
+
+/* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
+const sr = ScrollReveal({
+      origin: 'top',
+      distance: '80px',
+      duration: 2000,
+      reset: true
+})
+
+/* -- HOME -- */
+sr.reveal('.featured-text-card',{})
+sr.reveal('.featured-name',{delay: 100})
+sr.reveal('.featured-text-info',{delay: 200})
+sr.reveal('.featured-text-btn',{delay: 200})
+sr.reveal('.social_icons',{delay: 200})
+sr.reveal('.featured-image',{delay: 300})
+
+/* -- PROJECT BOX -- */
+sr.reveal('.content-box',{interval: 200})
+
+/* -- HEADINGS -- */
+sr.reveal('.top-header',{})
+
+/* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
+
+/* -- ABOUT INFO & CONTACT INFO -- */
+const srLeft = ScrollReveal({
+origin: 'left',
+distance: '80px',
+duration: 2000,
+reset: true
+})
+
+srLeft.reveal('.about-info',{delay: 100})
+srLeft.reveal('.contact-info',{delay: 100})
+
+/* -- ABOUT SKILLS & FORM BOX -- */
+const srRight = ScrollReveal({
+origin: 'right',
+distance: '80px',
+duration: 2000,
+reset: true
+})
+
+srRight.reveal('.skills-box',{delay: 100})
+srRight.reveal('.form-control',{delay: 100})
+
+/* ----- CHANGE ACTIVE LINK ----- */
+
+const sections = document.querySelectorAll('section[id]')
+function scrollActive() {
+const scrollY = window.scrollY;
+
+sections.forEach(current =>{
+  const sectionHeight = current.offsetHeight,
+      sectionTop = current.offsetTop - 50,
+    sectionId = current.getAttribute('id')
+
+  if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+
+      document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link')
+
+  }  else {
+
+    document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link')
+
+  }
+})
+}
+
+window.addEventListener('scroll', scrollActive)
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: ""
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+
+    <script>
+      let allLines = []
+
+      window.addEventListener("message", (message) => {
+        if (message.data.console){
+          let insert = document.querySelector("#insert")
+          allLines.push(message.data.console.payload)
+          insert.innerHTML = allLines.join(";\r")
+
+          let result = eval.call(null, message.data.console.payload)
+          if (result !== undefined){
+            console.log(result)
+          }
+        }
+      })
+    </script>
+
+</body>
+</html>
